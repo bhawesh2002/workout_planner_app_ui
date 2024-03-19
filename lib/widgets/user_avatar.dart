@@ -12,7 +12,7 @@ class UserAvatar extends StatelessWidget {
       onTap: onTap,
       child: CircleAvatar(
         radius: radius ?? MediaQuery.of(context).size.width * 0.08,
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.white.withOpacity(0.4),
         child: imgPath == null ? null : Image.asset(imgPath!),
       ),
     );
