@@ -32,22 +32,22 @@ class WorkoutStatusCard extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    exercisesRow(context, constraints,
+                    exercises(context, constraints,
                         color: Colors.red,
                         exerciseName: "Single-leg deadlifts",
                         reps: "30",
                         units: "x4"),
-                    exercisesRow(context, constraints,
+                    exercises(context, constraints,
                         color: Colors.cyan,
                         exerciseName: "Squat",
                         reps: "25",
                         units: "x4"),
-                    exercisesRow(context, constraints,
+                    exercises(context, constraints,
                         color: Colors.yellow,
                         exerciseName: "Treadmill",
                         reps: "10",
                         units: "mins"),
-                    exercisesRow(context, constraints,
+                    exercises(context, constraints,
                         color: Colors.blue,
                         exerciseName: "Dumbell",
                         reps: "15",
@@ -112,7 +112,7 @@ Row titleRow(BuildContext context, BoxConstraints constraints) {
   );
 }
 
-Container exercisesRow(
+Container exercises(
   BuildContext context,
   BoxConstraints constraints, {
   required String exerciseName,
