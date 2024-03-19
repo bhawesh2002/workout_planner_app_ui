@@ -13,11 +13,11 @@ class MoreButton extends StatelessWidget {
         onTap: () {},
         splashColor: Colors.transparent,
         child: Padding(
-          padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.03),
+          padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
           child: Icon(
             Icons.more_horiz,
             color: Colors.white,
-            size: MediaQuery.of(context).size.width * 0.08,
+            size: MediaQuery.of(context).size.width * 0.085,
           ),
         ),
       ),
