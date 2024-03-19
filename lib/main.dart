@@ -17,10 +17,16 @@ class MainApp extends StatelessWidget {
           scaffoldBackgroundColor: AppColors.bgColor,
           primaryColor: AppColors.primary,
           textTheme: const TextTheme(
-            headlineMedium: TextStyle(
-              color: Colors.white,
-            ),
-          ),
+              headlineMedium:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              titleLarge: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+              ),
+              titleMedium: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              )),
           fontFamily: GoogleFonts.martianMono().fontFamily),
       home: const HomePage(),
     );
