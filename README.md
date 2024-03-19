@@ -1,2 +1,3 @@
-# workout_planner_app_ui
- 
+# workout_planner_app
+
+A new Flutter project.
