@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:workout_planner_app/theme/app_colors.dart';
 
 class WorkoutStatusCard extends StatelessWidget {
