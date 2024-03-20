@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_planner_app/pages/overall_status_page.dart';
 import 'package:workout_planner_app/theme/app_colors.dart';
 import 'package:workout_planner_app/widgets/headline_text.dart';
 import 'package:workout_planner_app/widgets/loss_tile.dart';
@@ -69,13 +70,19 @@ class HomePage extends StatelessWidget {
               right: width * 0.065,
               child: Align(
                 alignment: Alignment.centerRight,
-                child: Text(
-                  "See All",
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                        fontSize: width * 0.028,
-                        color: AppColors.primary,
-                      ),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const OverallStatusPage()));
+                  },
+                  child: Text(
+                    "See All",
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                          fontSize: width * 0.028,
+                          color: AppColors.primary,
+                        ),
+                  ),
                 ),
               ),
             ),
