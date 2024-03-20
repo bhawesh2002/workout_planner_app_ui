@@ -7,7 +7,7 @@ class WorkoutStatusCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.85,
+      width: MediaQuery.of(context).size.width * 0.9,
       height: MediaQuery.of(context).size.height * 0.28,
       decoration: BoxDecoration(
         borderRadius:
@@ -143,7 +143,7 @@ Container exercises(
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium
-                      ?.copyWith(fontSize: constraints.maxWidth * 0.04),
+                      ?.copyWith(fontSize: constraints.maxWidth * 0.035),
                 ),
               ),
             ],
@@ -160,7 +160,7 @@ Container exercises(
               style: Theme.of(context)
                   .textTheme
                   .titleMedium
-                  ?.copyWith(fontSize: constraints.maxWidth * 0.045),
+                  ?.copyWith(fontSize: constraints.maxWidth * 0.04),
               children: [
                 TextSpan(
                   text: units,
