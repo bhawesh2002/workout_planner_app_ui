@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
               )),
-          fontFamily: GoogleFonts.martianMono().fontFamily),
+          fontFamily: GoogleFonts.montserrat().fontFamily),
       home: const HomePage(),
     );
   }
