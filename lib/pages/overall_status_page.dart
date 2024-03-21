@@ -46,7 +46,7 @@ class OverallStatusPage extends StatelessWidget {
                   width: width * 0.9,
                   height: height * 0.6,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.white.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(width * 0.06),
                   ),
                   padding: EdgeInsets.symmetric(
