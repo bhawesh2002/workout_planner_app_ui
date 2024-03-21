@@ -113,7 +113,7 @@ class CurrentWeightCard extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   width: constraints.maxWidth,
-                  height: constraints.maxHeight * 0.125,
+                  height: constraints.maxHeight * 0.15,
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(constraints.maxHeight),
@@ -135,7 +135,7 @@ class CurrentWeightCard extends StatelessWidget {
                                 .titleLarge
                                 ?.copyWith(
                                   fontWeight: FontWeight.normal,
-                                  fontSize: constraints.maxWidth * 0.03,
+                                  fontSize: constraints.maxWidth * 0.04,
                                 ),
                           ),
                         ),
@@ -149,7 +149,7 @@ class CurrentWeightCard extends StatelessWidget {
                                 MaterialStatePropertyAll(Colors.white),
                           ),
                           padding: EdgeInsets.all(
-                            constraints.maxHeight * 0.03,
+                            constraints.maxHeight * 0.035,
                           ),
                           icon: Icon(
                             Icons.arrow_outward,
