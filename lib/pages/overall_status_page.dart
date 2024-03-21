@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:workout_planner_app/widgets/more_button.dart';
 
 class OverallStatusPage extends StatelessWidget {
@@ -155,52 +154,60 @@ class OverallStatusPage extends StatelessWidget {
                             ),
                           ),
                         ),
+                        //Check Your Overall Score
                         Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomCenter,
                             child: Container(
                               width: constraints.maxWidth,
-                              height: constraints.maxHeight * 0.15,
+                              height: constraints.maxHeight * 0.125,
                               decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(
                                     constraints.maxHeight),
                               ),
                               padding: EdgeInsets.symmetric(
-                                  horizontal: constraints.maxWidth * 0.02),
+                                  horizontal: constraints.maxWidth * 0.025),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        left: constraints.maxWidth * 0.05),
-                                    child: Text(
-                                      "Check Your Overall Score",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleLarge
-                                          ?.copyWith(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize:
-                                                constraints.maxWidth * 0.04,
-                                          ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                          left: constraints.maxWidth * 0.05),
+                                      child: Text(
+                                        "Check Your Overall Score",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleLarge
+                                            ?.copyWith(
+                                              fontWeight: FontWeight.normal,
+                                              fontSize:
+                                                  constraints.maxWidth * 0.03,
+                                            ),
+                                      ),
                                     ),
                                   ),
-                                  IconButton(
-                                    onPressed: () {},
-                                    style: const ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Colors.white),
+                                  Flexible(
+                                    flex: 1,
+                                    child: IconButton(
+                                      onPressed: () {},
+                                      style: const ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStatePropertyAll(
+                                                Colors.white),
+                                      ),
+                                      padding: EdgeInsets.all(
+                                        constraints.maxHeight * 0.03,
+                                      ),
+                                      icon: Icon(
+                                        Icons.arrow_outward,
+                                        color: Colors.black.withOpacity(0.7),
+                                      ),
                                     ),
-                                    padding: EdgeInsets.all(
-                                      constraints.maxHeight * 0.035,
-                                    ),
-                                    icon: Icon(
-                                      Icons.arrow_outward,
-                                      color: Colors.black.withOpacity(0.7),
-                                    ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
