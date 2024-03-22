@@ -110,61 +110,58 @@ class CurrentWeightCard extends StatelessWidget {
             //Check Your Overall Score
             Positioned.fill(
               child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  width: constraints.maxWidth,
-                  height: constraints.maxHeight * 0.15,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(constraints.maxHeight),
-                  ),
-                  padding: EdgeInsets.symmetric(
-                      horizontal: constraints.maxWidth * 0.025),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              left: constraints.maxWidth * 0.05),
-                          child: Text(
-                            "Check Your Overall Score",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge
-                                ?.copyWith(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: constraints.maxWidth * 0.04,
-                                ),
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        flex: 1,
-                        child: IconButton(
-                          onPressed: () {},
-                          style: const ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(Colors.white),
-                          ),
-                          padding: EdgeInsets.all(
-                            constraints.maxHeight * 0.035,
-                          ),
-                          icon: Icon(
-                            Icons.arrow_outward,
-                            color: Colors.black.withOpacity(0.7),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                  alignment: Alignment.bottomCenter,
+                  child: checkOverallScore(context, constraints)),
             ),
           ],
         );
       }),
     );
   }
+}
+
+Widget checkOverallScore(BuildContext context, BoxConstraints constraints) {
+  return Container(
+    width: constraints.maxWidth,
+    height: constraints.maxHeight * 0.15,
+    decoration: BoxDecoration(
+      color: Colors.black,
+      borderRadius: BorderRadius.circular(constraints.maxHeight),
+    ),
+    padding: EdgeInsets.symmetric(horizontal: constraints.maxWidth * 0.025),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Expanded(
+          flex: 2,
+          child: Padding(
+            padding: EdgeInsets.only(left: constraints.maxWidth * 0.05),
+            child: Text(
+              "Check Your Overall Score",
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.normal,
+                    fontSize: constraints.maxWidth * 0.04,
+                  ),
+            ),
+          ),
+        ),
+        Flexible(
+          flex: 1,
+          child: IconButton(
+            onPressed: () {},
+            style: const ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll(Colors.white),
+            ),
+            padding: EdgeInsets.all(
+              constraints.maxHeight * 0.035,
+            ),
+            icon: Icon(
+              Icons.arrow_outward,
+              color: Colors.black.withOpacity(0.7),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
