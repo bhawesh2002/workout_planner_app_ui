@@ -22,9 +22,12 @@ class HomePage extends StatelessWidget {
             Positioned.fill(
               top: height * 0.03,
               left: width * 0.065,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.topLeft,
-                child: MoreButton(),
+                child: AppBarButton(
+                  icon: Icons.more_horiz,
+                  onTap: () {},
+                ),
               ),
             ),
             //user avatar

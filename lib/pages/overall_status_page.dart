@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:workout_planner_app/widgets/current_weight_card.dart';
 import 'package:workout_planner_app/widgets/more_button.dart';
 import 'package:workout_planner_app/widgets/score_tile.dart';
@@ -17,9 +18,14 @@ class OverallStatusPage extends StatelessWidget {
             Positioned.fill(
               top: height * 0.03,
               left: width * 0.065,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.topLeft,
-                child: MoreButton(),
+                child: AppBarButton(
+                  icon: Icons.arrow_back,
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
               ),
             ),
             Positioned.fill(
@@ -35,9 +41,12 @@ class OverallStatusPage extends StatelessWidget {
             Positioned.fill(
               top: height * 0.03,
               right: width * 0.065,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.topRight,
-                child: MoreButton(),
+                child: AppBarButton(
+                  icon: Icons.search,
+                  onTap: () {},
+                ),
               ),
             ),
             //CurrentWeightCard
