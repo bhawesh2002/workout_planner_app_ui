@@ -20,25 +20,32 @@ class CurrentWeightCard extends StatelessWidget {
         return Stack(
           children: [
             Positioned.fill(
-              top: constraints.maxHeight * 0.0165,
+              top: constraints.maxHeight * 0.010,
               left: constraints.maxWidth * 0.02,
               child: Align(
                 alignment: Alignment.topLeft,
-                child: Text(
-                  "Current Weight",
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontSize: constraints.maxHeight * 0.03,
-                        fontWeight: FontWeight.normal,
-                      ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Current Weight",
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            fontSize: constraints.maxHeight * 0.05,
+                            fontWeight: FontWeight.normal,
+                          ),
+                    ),
+                    weekButton(context, constraints),
+                  ],
                 ),
               ),
             ),
-            Positioned.fill(
-              right: constraints.maxWidth * 0.02,
-              child: Align(
-                  alignment: Alignment.topRight,
-                  child: weekButton(context, constraints)),
-            ),
+            // Positioned.fill(
+            //   right: constraints.maxWidth * 0.02,
+            //   child: Align(
+            //     alignment: Alignment.topRight,
+            //     child: weekButton(context, constraints),
+            //   ),
+            // ),
             Positioned.fill(
               top: constraints.maxHeight * 0.1,
               left: constraints.maxWidth * 0.02,
@@ -81,45 +88,38 @@ class CurrentWeightCard extends StatelessWidget {
 
 Widget weekButton(BuildContext context, BoxConstraints constraints) {
   return Container(
-    width: constraints.maxWidth,
-    height: constraints.maxHeight * 0.15,
+    width: constraints.maxWidth * 0.3,
+    height: constraints.maxHeight * 0.08,
     decoration: BoxDecoration(
       color: Colors.black,
       borderRadius: BorderRadius.circular(constraints.maxHeight),
     ),
-    padding: EdgeInsets.symmetric(horizontal: constraints.maxWidth * 0.025),
+    padding: EdgeInsets.symmetric(horizontal: constraints.maxWidth * 0.015),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
-          flex: 2,
+        Padding(
+          padding: EdgeInsets.only(
+            left: constraints.maxWidth * 0.055,
+          ),
+          child: Text(
+            "Week",
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                color: Colors.white, fontSize: constraints.maxWidth * 0.035),
+          ),
+        ),
+        Material(
+          shape: const CircleBorder(),
+          color: Colors.white.withOpacity(0.15),
           child: Padding(
-            padding: EdgeInsets.only(left: constraints.maxWidth * 0.05),
-            child: Text(
-              "Check Your Overall Score",
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.normal,
-                    fontSize: constraints.maxWidth * 0.04,
-                  ),
+            padding: EdgeInsets.all(constraints.maxWidth * 0.020),
+            child: Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Colors.white,
+              size: constraints.maxWidth * 0.035,
             ),
           ),
-        ),
-        Flexible(
-          flex: 1,
-          child: IconButton(
-            onPressed: () {},
-            style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Colors.white),
-            ),
-            padding: EdgeInsets.all(
-              constraints.maxHeight * 0.035,
-            ),
-            icon: Icon(
-              Icons.arrow_outward,
-              color: Colors.black.withOpacity(0.7),
-            ),
-          ),
-        ),
+        )
       ],
     ),
   );
