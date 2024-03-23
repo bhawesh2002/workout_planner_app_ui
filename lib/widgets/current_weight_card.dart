@@ -20,7 +20,6 @@ class CurrentWeightCard extends StatelessWidget {
         return Stack(
           children: [
             Positioned.fill(
-              top: constraints.maxHeight * 0.010,
               left: constraints.maxWidth * 0.02,
               child: Align(
                 alignment: Alignment.topLeft,
@@ -55,8 +54,8 @@ class CurrentWeightCard extends StatelessWidget {
                   text: TextSpan(
                     text: "54",
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontSize: constraints.maxHeight * 0.065,
-                          fontWeight: FontWeight.normal,
+                          fontSize: constraints.maxHeight * 0.08,
+                          fontWeight: FontWeight.bold,
                         ),
                     children: [
                       TextSpan(
@@ -88,8 +87,8 @@ class CurrentWeightCard extends StatelessWidget {
 
 Widget weekButton(BuildContext context, BoxConstraints constraints) {
   return Container(
-    width: constraints.maxWidth * 0.3,
-    height: constraints.maxHeight * 0.08,
+    width: constraints.maxWidth * 0.30,
+    height: constraints.maxHeight * 0.1,
     decoration: BoxDecoration(
       color: Colors.black,
       borderRadius: BorderRadius.circular(constraints.maxHeight),
@@ -98,21 +97,23 @@ Widget weekButton(BuildContext context, BoxConstraints constraints) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: EdgeInsets.only(
-            left: constraints.maxWidth * 0.055,
-          ),
-          child: Text(
-            "Week",
-            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                color: Colors.white, fontSize: constraints.maxWidth * 0.035),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: constraints.maxWidth * 0.04,
+            ),
+            child: Text(
+              "Week",
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  color: Colors.white, fontSize: constraints.maxWidth * 0.04),
+            ),
           ),
         ),
         Material(
           shape: const CircleBorder(),
           color: Colors.white.withOpacity(0.15),
           child: Padding(
-            padding: EdgeInsets.all(constraints.maxWidth * 0.020),
+            padding: EdgeInsets.all(constraints.maxWidth * 0.025),
             child: Icon(
               Icons.arrow_forward_ios_rounded,
               color: Colors.white,
