@@ -38,13 +38,6 @@ class CurrentWeightCard extends StatelessWidget {
                 ),
               ),
             ),
-            // Positioned.fill(
-            //   right: constraints.maxWidth * 0.02,
-            //   child: Align(
-            //     alignment: Alignment.topRight,
-            //     child: weekButton(context, constraints),
-            //   ),
-            // ),
             Positioned.fill(
               top: constraints.maxHeight * 0.1,
               left: constraints.maxWidth * 0.02,
