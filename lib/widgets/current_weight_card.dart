@@ -16,13 +16,16 @@ class CurrentWeightCard extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           vertical: MediaQuery.of(context).size.height * 0.03,
           horizontal: MediaQuery.of(context).size.width * 0.035),
-      child: LayoutBuilder(builder: (context, constraints) {
-        return Stack(
-          children: [
-            Positioned.fill(
-              left: constraints.maxWidth * 0.02,
-              child: Align(
-                alignment: Alignment.topLeft,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: constraints.maxWidth * 0.02,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -37,12 +40,11 @@ class CurrentWeightCard extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            Positioned.fill(
-              top: constraints.maxHeight * 0.1,
-              left: constraints.maxWidth * 0.02,
-              child: Align(
-                alignment: Alignment.topLeft,
+              //Weight
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: constraints.maxWidth * 0.02,
+                ),
                 child: RichText(
                   text: TextSpan(
                     text: "54",
@@ -63,17 +65,27 @@ class CurrentWeightCard extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            //Check Your Overall Score
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: checkOverallScore(context, constraints),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: constraints.maxHeight * 0.05,
+                    horizontal: constraints.maxWidth * 0.02,
+                  ),
+                  child: LayoutBuilder(builder: ((context, constraints) {
+                    return Container(
+                      color: Colors.black,
+                      width: constraints.maxWidth,
+                      height: constraints.maxHeight,
+                    );
+                  })),
+                ),
               ),
-            ),
-          ],
-        );
-      }),
+              //Check Your Overall Score
+              checkOverallScore(context, constraints),
+            ],
+          );
+        },
+      ),
     );
   }
 }
