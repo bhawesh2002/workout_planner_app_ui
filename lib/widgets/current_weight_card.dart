@@ -69,7 +69,7 @@ class CurrentWeightCard extends StatelessWidget {
               Expanded(
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    vertical: constraints.maxHeight * 0.04,
+                    vertical: constraints.maxHeight * 0.055,
                     horizontal: constraints.maxWidth * 0.02,
                   ),
                   child: LayoutBuilder(
@@ -85,28 +85,28 @@ class CurrentWeightCard extends StatelessWidget {
                           ProgressBar(
                             change: '-0.4',
                             count: '24',
-                            progress: 40,
+                            progress: 50,
                           ),
                           ProgressBar(
                             change: '+1.0',
                             count: '25',
                             isSelected: true,
-                            progress: 80,
+                            progress: 65,
                           ),
                           ProgressBar(
                             change: '-0.3',
                             count: '26',
-                            progress: 40,
+                            progress: 50,
                           ),
                           ProgressBar(
                             change: '-1.5',
                             count: '27',
-                            progress: 30,
+                            progress: 35,
                           ),
                           ProgressBar(
                             change: '+0.8',
                             count: '28',
-                            progress: 50,
+                            progress: 45,
                           ),
                         ],
                       );
