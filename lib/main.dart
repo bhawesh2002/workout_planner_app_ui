@@ -26,6 +26,10 @@ class MainApp extends StatelessWidget {
               titleMedium: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
+              ),
+              titleSmall: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
               )),
           fontFamily: GoogleFonts.montserrat().fontFamily),
       home: const HomePage(),
