@@ -15,11 +15,10 @@ class AppBarButton extends StatelessWidget {
         onTap: onTap,
         splashColor: Colors.transparent,
         child: Padding(
-          padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+          padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
           child: Icon(
             icon,
             color: Colors.white,
-            size: MediaQuery.of(context).size.width * 0.085,
           ),
         ),
       ),

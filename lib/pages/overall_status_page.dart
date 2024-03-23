@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:workout_planner_app/widgets/current_weight_card.dart';
 import 'package:workout_planner_app/widgets/more_button.dart';
 import 'package:workout_planner_app/widgets/score_tile.dart';
