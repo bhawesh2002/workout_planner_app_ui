@@ -30,7 +30,7 @@ class CurrentWeightCard extends StatelessWidget {
                       "Current Weight",
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontSize: constraints.maxHeight * 0.05,
-                            fontWeight: FontWeight.normal,
+                            fontWeight: FontWeight.w600,
                           ),
                     ),
                     weekButton(context, constraints),
@@ -63,7 +63,7 @@ class CurrentWeightCard extends StatelessWidget {
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: constraints.maxHeight * 0.04,
-                                  fontWeight: FontWeight.normal,
+                                  fontWeight: FontWeight.w600,
                                 ),
                       ),
                     ],
