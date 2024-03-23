@@ -90,15 +90,15 @@ class LinePainter extends CustomPainter {
     final paint = Paint()
       ..color = Colors.grey.withOpacity(0.6)
       ..strokeWidth = 3;
-    const spaceBetnLines = 10.0;
+    const spaceBetnLines = 12.0;
     final linesCount = (size.height / spaceBetnLines).floor();
     final lineYPositions = List.generate(
-      linesCount + 10,
-      (index) => spaceBetnLines * (index + 1),
+      linesCount + 5,
+      (index) => spaceBetnLines * (index - 1),
     );
     for (final lineY in lineYPositions) {
       // Calculate the angle based on progress
-      const double angle = math.pi / 4;
+      const double angle = -(math.pi / 4);
 
       // Calculate the new coordinates of the endpoints after rotation
       const double startX = 0;
