@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_planner_app/widgets/progress_bars.dart';
 
 class CurrentWeightCard extends StatelessWidget {
   const CurrentWeightCard({super.key});
@@ -9,7 +10,7 @@ class CurrentWeightCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.9,
       height: MediaQuery.of(context).size.height * 0.5,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.2),
+        color: Colors.white.withOpacity(0.15),
         borderRadius:
             BorderRadius.circular(MediaQuery.of(context).size.width * 0.06),
       ),
@@ -68,16 +69,49 @@ class CurrentWeightCard extends StatelessWidget {
               Expanded(
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    vertical: constraints.maxHeight * 0.05,
+                    vertical: constraints.maxHeight * 0.04,
                     horizontal: constraints.maxWidth * 0.02,
                   ),
-                  child: LayoutBuilder(builder: ((context, constraints) {
-                    return Container(
-                      color: Colors.black,
-                      width: constraints.maxWidth,
-                      height: constraints.maxHeight,
-                    );
-                  })),
+                  child: LayoutBuilder(
+                    builder: ((context, constraints) {
+                      return const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ProgressBar(
+                            change: '+1.2',
+                            count: '23',
+                            progress: 100,
+                          ),
+                          ProgressBar(
+                            change: '-0.4',
+                            count: '24',
+                            progress: 40,
+                          ),
+                          ProgressBar(
+                            change: '+1.0',
+                            count: '25',
+                            isSelected: true,
+                            progress: 80,
+                          ),
+                          ProgressBar(
+                            change: '-0.3',
+                            count: '26',
+                            progress: 40,
+                          ),
+                          ProgressBar(
+                            change: '-1.5',
+                            count: '27',
+                            progress: 30,
+                          ),
+                          ProgressBar(
+                            change: '+0.8',
+                            count: '28',
+                            progress: 50,
+                          ),
+                        ],
+                      );
+                    }),
+                  ),
                 ),
               ),
               //Check Your Overall Score
