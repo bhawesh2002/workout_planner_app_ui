@@ -8,5 +8,6 @@ Link to design: https://dribbble.com/shots/23852331-Workout-Planner-App
 ![original-aada7b4c141b7131d3b6dc4976658702](https://github.com/bhawesh2002/workout_planner_app_ui/assets/55053472/3786b423-9a60-4e6e-b012-b43fe98cea96)
 
 # Current Status
-https://github.com/bhawesh2002/workout_planner_app_ui/assets/55053472/4145d3ee-3e5c-4859-b393-f415c5471262
+
+https://github.com/bhawesh2002/workout_planner_app_ui/assets/55053472/ccfd1220-e430-4bd3-9605-704177730298
 
