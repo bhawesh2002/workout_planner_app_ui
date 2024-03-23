@@ -178,7 +178,7 @@ Widget checkOverallScore(BuildContext context, BoxConstraints constraints) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          flex: 2,
+          flex: 3,
           child: Padding(
             padding: EdgeInsets.only(left: constraints.maxWidth * 0.05),
             child: Text(
