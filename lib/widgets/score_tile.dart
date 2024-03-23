@@ -30,71 +30,73 @@ class ScoreTile extends StatelessWidget {
       padding: EdgeInsets.only(
         top: height * 0.035,
         bottom: height * 0.02,
-        left: width * 0.065,
-        right: width * 0.065,
+        left: width * 0.07,
+        right: width * 0.07,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              RichText(
-                text: TextSpan(
-                  text: amount,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontSize: height * 0.03,
-                        fontWeight: FontWeight.w500,
+          Flexible(
+            flex: 2,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    text: amount,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontSize: height * 0.03,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    children: [
+                      TextSpan(
+                        text: " $unit",
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
                       ),
-                  children: [
-                    TextSpan(
-                      text: unit,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.normal,
-                          ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Text(
-                "Target: $target $unit",
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontSize: height * 0.015,
-                      fontWeight: FontWeight.normal,
-                    ),
-              ),
-            ],
+                Text(
+                  "Target: $target $unit",
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontSize: height * 0.015,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ],
+            ),
           ),
           Expanded(
-            child: SizedBox(
-              child: Stack(
-                children: [
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: LinearProgressIndicator(
-                        value: 1,
-                        color: Colors.white,
-                        minHeight: 3,
-                        borderRadius: BorderRadius.circular(width),
-                      ),
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: LinearProgressIndicator(
+                      value: 1,
+                      color: Colors.black.withOpacity(0.6),
+                      minHeight: 4,
+                      borderRadius: BorderRadius.circular(width),
                     ),
                   ),
-                  Positioned.fill(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: LinearProgressIndicator(
-                        value: completion / 100,
-                        color: isSelected ? Colors.black : AppColors.primary,
-                        backgroundColor: Colors.transparent,
-                        minHeight: 10,
-                        borderRadius: BorderRadius.circular(width),
-                      ),
+                ),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: LinearProgressIndicator(
+                      value: completion / 100,
+                      color: isSelected ? Colors.black : AppColors.primary,
+                      backgroundColor: Colors.transparent,
+                      minHeight: 8,
+                      borderRadius: BorderRadius.circular(width),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
