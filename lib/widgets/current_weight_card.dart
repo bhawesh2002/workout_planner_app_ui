@@ -185,7 +185,7 @@ Widget checkOverallScore(BuildContext context, BoxConstraints constraints) {
               "Check Your Overall Score",
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.normal,
-                    fontSize: constraints.maxWidth * 0.04,
+                    fontSize: constraints.maxWidth * 0.045,
                   ),
             ),
           ),
@@ -198,7 +198,7 @@ Widget checkOverallScore(BuildContext context, BoxConstraints constraints) {
               backgroundColor: MaterialStatePropertyAll(Colors.white),
             ),
             padding: EdgeInsets.all(
-              constraints.maxHeight * 0.035,
+              constraints.maxHeight * 0.03,
             ),
             icon: Icon(
               Icons.arrow_outward,
