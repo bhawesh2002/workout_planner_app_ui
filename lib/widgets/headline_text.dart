@@ -13,7 +13,7 @@ class HeadlineText extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineMedium
-              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.07),
+              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.0735),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
@@ -23,7 +23,7 @@ class HeadlineText extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineMedium
-              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.07),
+              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.0735),
         ),
       ],
     );
