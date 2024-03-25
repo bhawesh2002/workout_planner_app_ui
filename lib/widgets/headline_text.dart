@@ -9,21 +9,20 @@ class HeadlineText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Start Your",
-          style: Theme.of(context)
-              .textTheme
-              .headlineMedium
-              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.0735),
+          "Start your",
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                fontSize: MediaQuery.of(context).size.width * 0.08,
+                fontWeight: FontWeight.bold,
+              ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
         Text(
           "workout today!",
-          style: Theme.of(context)
-              .textTheme
-              .headlineMedium
-              ?.copyWith(fontSize: MediaQuery.of(context).size.width * 0.0735),
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+              fontSize: MediaQuery.of(context).size.width * 0.08,
+              fontWeight: FontWeight.bold),
         ),
       ],
     );
