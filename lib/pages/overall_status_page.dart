@@ -33,7 +33,10 @@ class OverallStatusPage extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Text(
                   "Overall Status",
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontSize: MediaQuery.of(context).size.width * 0.045,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
               ),
             ),
