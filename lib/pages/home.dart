@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                 child: Text(
                   "Overall Status",
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.normal, fontSize: width * 0.04),
+                      fontWeight: FontWeight.bold, fontSize: width * 0.045),
                 ),
               ),
             ),
