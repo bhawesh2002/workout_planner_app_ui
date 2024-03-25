@@ -12,7 +12,7 @@ class WorkoutStatusCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius:
             BorderRadius.circular(MediaQuery.of(context).size.width * 0.085),
-        color: AppColors.primary,
+        gradient: AppColors.primaryGradient,
       ),
       padding: EdgeInsets.symmetric(
         vertical: MediaQuery.of(context).size.height * 0.02,
