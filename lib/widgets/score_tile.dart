@@ -24,7 +24,12 @@ class ScoreTile extends StatelessWidget {
       height: height * 0.12,
       width: width * 0.9,
       decoration: BoxDecoration(
-        color: isSelected ? AppColors.primary : Colors.white.withOpacity(0.2),
+        gradient: isSelected
+            ? AppColors.primaryGradient
+            : LinearGradient(colors: [
+                Colors.white.withOpacity(0.18),
+                Colors.white.withOpacity(0.18)
+              ]),
         borderRadius: BorderRadius.circular(width * 0.08),
       ),
       padding: EdgeInsets.only(
