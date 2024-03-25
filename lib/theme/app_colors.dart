@@ -10,7 +10,7 @@ class AppColors {
     end: Alignment.bottomRight,
     stops: [0.05, 0.95],
     colors: <Color>[
-      Color.fromARGB(255, 127, 81, 255),
+      Color.fromARGB(255, 133, 88, 254),
       Color.fromARGB(255, 117, 67, 255),
     ],
   );
