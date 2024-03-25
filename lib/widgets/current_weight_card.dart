@@ -144,7 +144,10 @@ Widget weekButton(BuildContext context, BoxConstraints constraints) {
             child: Text(
               "Week",
               style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  color: Colors.white, fontSize: constraints.maxWidth * 0.04),
+                    color: Colors.white,
+                    fontSize: constraints.maxWidth * 0.04,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
           ),
         ),
