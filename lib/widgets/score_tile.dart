@@ -94,7 +94,9 @@ class ScoreTile extends StatelessWidget {
                     alignment: Alignment.center,
                     child: LinearProgressIndicator(
                       value: completion / 100,
-                      color: isSelected ? Colors.black : AppColors.primary,
+                      color: isSelected
+                          ? Colors.black.withOpacity(0.8)
+                          : AppColors.primary,
                       backgroundColor: Colors.transparent,
                       minHeight: 8,
                       borderRadius: BorderRadius.circular(width),
