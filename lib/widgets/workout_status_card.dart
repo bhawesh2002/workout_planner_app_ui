@@ -68,17 +68,17 @@ Row titleRow(BuildContext context, BoxConstraints constraints) {
       Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.white.withOpacity(0.3),
+          color: Colors.white.withOpacity(0.25),
         ),
-        padding: EdgeInsets.all(constraints.maxWidth * 0.05),
+        padding: EdgeInsets.all(constraints.maxWidth * 0.06),
         child: Icon(
           Icons.whatshot,
           color: Colors.white,
-          size: constraints.maxWidth * 0.06,
+          size: constraints.maxWidth * 0.07,
         ),
       ),
       SizedBox(
-        width: constraints.maxWidth * 0.02,
+        width: constraints.maxWidth * 0.025,
       ),
       RichText(
         text: TextSpan(
@@ -128,7 +128,7 @@ Container exercises(
             children: [
               Container(
                 width: constraints.maxWidth * 0.006,
-                height: constraints.maxHeight * 0.065,
+                height: constraints.maxHeight * 0.05,
                 color: color,
               ),
               SizedBox(
