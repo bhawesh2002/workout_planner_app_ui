@@ -85,16 +85,16 @@ Row titleRow(BuildContext context, BoxConstraints constraints) {
           children: [
             TextSpan(
               text: "918",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(fontSize: constraints.maxWidth * 0.08),
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontSize: constraints.maxWidth * 0.08,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             TextSpan(
               text: " cal",
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontSize: constraints.maxWidth * 0.05,
-                  fontWeight: FontWeight.w600),
+                  fontWeight: FontWeight.bold),
             ),
             TextSpan(
               text: " /1024 cal",
@@ -128,7 +128,7 @@ Container exercises(
             children: [
               Container(
                 width: constraints.maxWidth * 0.006,
-                height: constraints.maxHeight * 0.06,
+                height: constraints.maxHeight * 0.065,
                 color: color,
               ),
               SizedBox(
@@ -143,7 +143,7 @@ Container exercises(
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium
-                      ?.copyWith(fontSize: constraints.maxWidth * 0.035),
+                      ?.copyWith(fontSize: constraints.maxWidth * 0.04),
                 ),
               ),
             ],
@@ -157,10 +157,9 @@ Container exercises(
             overflow: TextOverflow.ellipsis,
             text: TextSpan(
               text: reps,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium
-                  ?.copyWith(fontSize: constraints.maxWidth * 0.04),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontSize: constraints.maxWidth * 0.045,
+                  fontWeight: FontWeight.bold),
               children: [
                 TextSpan(
                   text: units,
